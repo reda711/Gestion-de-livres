@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header
+      class="w-[98%] h-24 bg-[#000080] text-white text-4xl pl-8 pt-8 mx-auto rounded-2xl mt-4"
+    >
+      <h1>&#128218; My Book Library</h1>
+    </header>
+    <main class="flex bg-gray-100 h-250 mt-8 w-98/100 mx-auto rounded-2xl border border-purple-300 justify-between">
+      <div id="leftmain" class="mt-8 mx-12 w-[60%]">
+        <div class="flex gap-12">
+          <div class="flex border rounded border-gray-200 bg-white shadow-2xl">
+            <img src="imgs/search.png" class="h-8 w-8 my-2 ml-2" alt="" />
+            <input
+            id="search"
+              type="text"
+              placeholder="search by title or author"
+              class="bg-white w-120 h-12 pl-2"
+            />
+          </div>
+          <select
+            name="select"
+            id="select"
+            class="border bg-white border-gray-200 w-120 rounded h-12 shadow-2xl"
+          >
+            <option selected disabled>Sort By</option>
+            <option value="az">By Title (A-Z)</option>
+            <option value="auth">By author</option>
+            <option value="year">By Year</option>
+          </select>
+        </div>
+        <div>
+          <ul id="booklist" class="flex w-full gap-12 ">
+
+          </ul>
+        </div>
+      </div>
+      <div id="rightmain" class="flex justify-end mr-8 mt-8">
+        <form
+          id="form" class="flex flex-col border border-gray-200 bg-white hover:border-[#000080] shadow-2xl gap-4 rounded-xl h-220 w-110 pl-8 pt-8"
+        >
+          <p class="mx-auto text-3xl text-[#000080]">Add a new Book</p>
+          <label for="titleinput"
+            >Title : *<br /><br />
+            <input
+            required
+              class="mx-auto border border-gray-200 w-90 rounded h-12 pl-2"
+              id="titleinput"
+              type="text"
+              placeholder="Enter book title"
+            />
+          </label>
+          <label for="authinput"
+            >author : *<br /><br />
+            <input
+            required
+              class="mx-auto border border-gray-200 w-90 rounded h-12 pl-2"
+              id="authinput"
+              type="text"
+              placeholder="Enter author name"
+            />
+          </label>
+          <label for="yearinput">
+            Year : <span class="text-sm text-gray-500">(optional)</span><br /><br />
+            <input
+              class="mx-auto border border-gray-200 w-90 rounded h-12 pl-2"
+              id="yearinput"
+              type="number"
+              placeholder="Enter book release year"
+            />
+          </label>
+          <label for="genreinput"
+            >Genre : <span class="text-sm text-gray-500">(optional)</span><br /><br />
+            <input
+              class="mx-auto border border-gray-200 w-90 rounded h-12 pl-2"
+              id="genreinput"
+              type="text"
+              placeholder="Enter book genre"
+            />
+          </label>
+          <label for="descriptioninput">
+            Description : <span class="text-sm text-gray-500">(optional)</span><br /><br />
+            <textarea
+              class="border border-gray-200 w-90 rounded h-12 pl-2"
+              id="descriptioninput"
+              type="text"
+              placeholder="Description"
+            ></textarea>
+          </label>
+          <label for="status">
+            Status : *<br /><br />
+            <select
+            required
+              name="status"
+              id="status"
+              class="border border-gray-200 w-90 rounded h-12 pl-2"
+            >
+              <option value="toread">To Read</option>
+              <option value="reading">Reading</option>
+              <option value="already">Reading Completed</option>
+            </select>
+          </label>
+          <button type="submit" class="bg-blue-600 w-90 h-14  rounded text-white cursor-pointer hover:bg-blue-500">Save Book</button>
+        </form>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
